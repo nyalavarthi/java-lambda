@@ -35,7 +35,7 @@ public class Handler implements RequestHandler<S3Event, ApiGatewayResponse> {
         InputStream objectData = s3Object.getObjectContent();
         
         try {
-        	String dest_bucket  = "ny-lambda-s3evt-dest-bucket2";
+        	String dest_bucket  = "your destination bucket here ..";
         	s3Client.putObject(dest_bucket, srcKey, objectData,s3Object.getObjectMetadata());
             System.out.println("Object uploaded to destination Bucket ");
             
